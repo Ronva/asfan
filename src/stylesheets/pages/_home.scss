@@ -1,0 +1,89 @@
+/* _-_-_- pages/HOME -_-_-_ */
+.app {
+  width: 800pt;
+  max-width: calc(100% - 16pt);
+  margin: 0 auto;
+  padding: 24pt 0;
+
+  .controls, .mainTable {
+    width: 100%;
+    overflow: auto;
+  }
+
+  .controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 8pt;
+
+    label {
+      text-transform: capitalize;
+    }
+  }
+
+  .mainTable {
+    position: relative;
+    max-height: 75vh;
+    margin-bottom: 16pt;
+
+    thead {
+      tr {
+        th {
+          transform-origin: 0 0 0;
+          position: sticky;
+          top: 0;
+          left: 0;
+          background: white;
+          padding: 4px 24px;
+          z-index: 99;
+        }
+      }
+    }
+
+    tbody {
+      tr {
+        [class*="numeric"] {
+          color: $numeric;
+        }
+        &:hover {
+          td:first-of-type {
+            font-weight: bold;
+          }
+          [class*="numeric"] {
+            color: darken($numeric, 30%);
+          }
+        }
+        &:nth-of-type(even) {
+          background: #f8f8f9;
+        }
+        td {
+          transition: all .3s ease;
+          &:first-of-type {
+            padding-right: 8pt;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+  }
+
+  .whatsNew {
+    display: flex;
+    align-items: center;
+    width: auto;
+    margin-bottom: 8pt;
+    padding: 8pt;
+    p {
+      font-style: italic;
+    }
+  }
+}
+
+.app .controls [class*="MuiSelect-select"], [class*="MuiPaper-root"] ul li {
+  text-transform: capitalize;
+  i {
+    margin-right: 0.5em;
+    font-size: 0.9em;
+    vertical-align: baseline;
+  }
+}

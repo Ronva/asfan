@@ -1,0 +1,15 @@
+/* _-_-_- base/BASE -_-_-_ */
+@charset 'utf-8';
+
+body {
+  background: $bg;
+  color: $text-color;
+  font-family: $text-font-stack;
+  line-height: 1.4;
+}
+
+.clearfix {
+  overflow: auto;
+  zoom: 1;
+}
+
